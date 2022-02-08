@@ -1,1 +1,12 @@
-
+spring:
+  cloud:
+    stream:
+      function:
+        routing:
+          enabled: true
+      bindings:
+        functionRouter-in-0:
+          destination: all-messages
+        outgoing-out-0:
+          destination: all-messages
+      source: outgoing
